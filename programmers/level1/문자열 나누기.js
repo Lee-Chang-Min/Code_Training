@@ -25,7 +25,24 @@ while (idx < s.length) {
     
 }
 
-console.log(result.length)
-//answer += result.length;
 
+/**
+ * 좋은 풀이라고 생각되는 부분
+ */
+let answer = 0;
+let current;
+let count = 0;
+
+for(let i = 0; i < s.length; i++) {
+    if(count === 0) {
+        answer++;
+        current = s[i]
+        count = 1
+    } else {
+        console.log(current);
+        console.log(s[i]);
+        if(current !== s[i]) count--;
+        else count++;
+    }
+}
 
