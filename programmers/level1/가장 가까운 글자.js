@@ -9,6 +9,7 @@ let s = 'banana'
 console.log(Array.from(s))
 Array.from(s).forEach((e, idx)=> {
     let n = 0;
+    let f = answer.length
     while(s[idx-1] !== undefined){
         n++
         console.log( s[idx-1]);
@@ -18,7 +19,8 @@ Array.from(s).forEach((e, idx)=> {
         }
         idx--;
     }
-    answer.push(-1)
+    let l = answer.length
+    if(f == l) answer.push(-1)
 });
 
 console.log(answer);
