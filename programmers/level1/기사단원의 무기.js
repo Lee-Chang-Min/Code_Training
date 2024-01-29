@@ -23,7 +23,7 @@ for(let 기사 = 1; 기사 <= number; 기사++){
     공격력.push(count);
 }
 
-console.log(공격력);
+//console.log(공격력);
 for(공 of 공격력){
     공 > limit ? answer += power : answer += 공
 }
