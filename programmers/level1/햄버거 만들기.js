@@ -24,17 +24,32 @@ let ingredient =  [1,2,1,2,3,1,3,1,2,3,1,2,3,1]
 
 // 시간초과
 
-let str = ingredient.join('');
+// let str = ingredient.join('');
 
-while(str.includes('1231')){
-    let t = str.length
-    str = str.replaceAll('1231', '');
-    answer += ((t  -  str.length) / 4);
+// while(str.includes('1231')){
+//     let t = str.length
+//     str = str.replaceAll('1231', '');
+//     answer += ((t  -  str.length) / 4);
+// }
+
+
+// console.log(answer);
+
+
+let count = 0;
+let temp = [];
+
+for(let i=0; i<ingredient.length; i++) {
+    temp.push(ingredient[i]);
+
+    // 3)
+    if(temp.slice(-4).join('') == '1231') { // 최신값에서 4개씩 확인 [ 2, 1, 1, 2 ] => [ 1, 1, 2, 3 ] => [ 1, 2, 3, 1 ]
+        count += 1;
+
+        // 4)
+        temp.splice(-4);
+    }
 }
-
-
-console.log(answer);
-
 
 
 
