@@ -23,7 +23,6 @@ for(let i = 1; i < food.length; i++){
     
 }
 
-answer.push(0)
-for()
+answer.push(0);
 
 console.log(answer);
