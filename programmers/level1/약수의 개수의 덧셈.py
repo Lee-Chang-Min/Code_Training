@@ -15,15 +15,6 @@ def solution(left, right):
 
     return answer
 
-left = 13
-rigth = 17
-
-answer = 0
-divisorsList = [];
-    
-    
-print(answer)
-
         
         
 
