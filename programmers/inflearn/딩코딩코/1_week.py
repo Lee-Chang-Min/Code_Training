@@ -120,3 +120,98 @@ result = find_max_plus_or_multiply
 
 #######################################################################
 #######################################################################
+
+# input = "abadabac"
+
+# def find_not_repeating_first_character(string):
+    
+#     for s in string:
+        
+
+
+# result = find_not_repeating_first_character
+# print("정답 = d 현재 풀이 값 =", result("abadabac"))
+# print("정답 = c 현재 풀이 값 =", result("aabbcddd"))
+# print("정답 =_ 현재 풀이 값 =", result("aaaaaaaa"))
+
+
+
+#소수 나열하기
+# 소수는 자기 자신과 1외 에는 아무것도 나눌 수 없다.
+
+input = 20
+
+
+def find_prime_list_under_number(number):
+    prime_list = []
+    # N의 제곱근 보다 크지 앟은 어떤 소수로도 나누어 떨어지지 않는다.
+
+    for n in range(2, number + 1):
+        # 이것들이 소수인가? 소수라면 prime_list에 넣어라
+        for i in prime_list: # 2 부터 n-1까지를 i 에 들어가는 것을 반복한다
+            if i * i <= n and n % i == 0:
+                break
+        else:
+            prime_list.append(n)
+     
+    return prime_list
+
+
+result = find_prime_list_under_number(input)
+# print(result)
+
+
+
+# 문자열 뒤집기
+input = "011110"
+
+
+def find_count_to_turn_out_to_all_zero_or_all_one(string):
+    count_to_zero = 0
+    count_to_one = 0
+
+    if string[0] == '0':
+        count_to_one += 1
+    elif string[0] == '1':
+        count_to_zero += 1
+
+    for i in range(len(string) - 1):
+        print(i)
+        if string[i] != string[i + 1]:
+            if string[i + 1] == '0':
+                count_to_one += 1
+            if string[i + 1] == '1':
+                count_to_zero += 1
+    # return min(count_to_zero, count_to_one)
+
+
+
+
+
+
+result = find_count_to_turn_out_to_all_zero_or_all_one(input)
+# print("정답",result)
+
+
+def summarize_string(input_str):
+    # 이 부분을 채워보세요!
+    result = ""
+    alphabet = [0] * 26
+
+    for i in input_str:
+        alphabet[ord(i) - 97] += 1
+
+    print(alphabet)
+
+    for i in range(len(alphabet)):
+        if alphabet[i] > 0:
+            result += chr(i+97)+str(alphabet[i])+"/"
+    return result[:-1]
+
+
+    
+
+
+input_str = "acccdeee"
+
+print(summarize_string(input_str))
