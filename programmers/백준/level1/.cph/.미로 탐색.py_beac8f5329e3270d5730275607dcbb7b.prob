@@ -1,0 +1,1 @@
+{"name":"Local: 미로 탐색","url":"c:\\Users\\82105\\Desktop\\Coding\\Algorithm\\programmers\\백준\\level1\\미로 탐색.py","tests":[{"id":1734012937645,"input":"4 6\n101111\n101010\n101011\n111011","output":"15"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\82105\\Desktop\\Coding\\Algorithm\\programmers\\백준\\level1\\미로 탐색.py","group":"local","local":true}
