@@ -1,20 +1,26 @@
-# N=int(input())
+from collections import deque
+
+N=int(input())
 # # d = [(-1,0), (1,0), (0,-1), (0,1)]
 # arr=[list(input()) for _ in range(N)]
 
 # ans = []
 # v = [[0]*N for _ in range(N)]
 
+# pop(0) -> O(n)
+# pop() -> O(1)
+
 
 def bfs(si,sj):
-    q = [] #필요 변수 생성
+    # q = [] #필요 변수 생성
+    q = deque()
 
     q.append((si,sj)) #초기 데이터 삽입
     v[si][sj]=1 # 방문 표시
     cnt = 1  # 정답처리 관련 작업
 
     while q:
-        ci,cj = q.pop(0)
+        ci,cj = q.popleft()
         for di,dj in ((-1,0), (1,0), (0,-1), (0,1)):
             ni,nj = ci+di, cj+dj
 
@@ -28,14 +34,14 @@ def bfs(si,sj):
 
 
 
-N = int(input())
+N = int(input()) # 7
 # arr = [list(map(int, input())) for _ in range(N)]
 arr = [list(input()) for _ in range(N)]
 
 v = [[0]*N for _ in range(N)]
 ans = []
-for i in range(N):
-    for j in range(N):
+for i in range(N): 
+    for j in range(N): 
         # 방문하지 않았던 아파트 발견시 bfs
         if arr[i][j]=='1'and v[i][j]==0:
             ans.append(bfs(i,j))
@@ -43,6 +49,25 @@ for i in range(N):
 
 
 print(len(ans), *sorted(ans), sep='\n')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
