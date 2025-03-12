@@ -5,20 +5,19 @@ def move(i,j,dr):
     back = -1
     for cnt in range(1, 10): # 벽을 만날때까지
         ni,nj = i+di[dr]*cnt, j+dj[dr]*cnt
-        if arr[ni][nj] == '#': return cnt+back
-        if arr[ni][nj] == 'O': return cnt
+        if arr[ni][nj] == '#': 
+            return cnt+back 
+        if arr[ni][nj] == 'O': 
+            return cnt
 
         # 다른 공을 지나간 경우 벽을 만났다면 한칸 뒤로
-        if arr[ni][nj] == 'B' or arr[ni][nj] == 'R': back -= 1
+        if arr[ni][nj] == 'B' or arr[ni][nj] == 'R': 
+            back -= 1
 
 
 
 def dfs(n, ri,rj,bi,bj):
     global ans
-    
-    # if (n, ri,rj,bi,bj) in v_set: # 이미 이 시도횟수에 이 좌표를 해봤음 => 가지치기
-    #     return
-    # v_set.add(n,ri,rj,bi,bj)
 
 
     if n > 10: 
@@ -38,7 +37,7 @@ def dfs(n, ri,rj,bi,bj):
 
         #구망에 대한 처리 (빨간색만 들어가면 성공, 파란색이 들어가면 실패)
         #[3] 이동한 위치가 홀인 경우 처리
-        if arr[nbi][nbj] == 'O':
+        if arr[nbi][nbj] == 'O': # 파란색 공이 들어가면 실패
             continue
         else:
             if arr[nri][nrj] == 'O' : # 빨간색 공만
@@ -75,8 +74,6 @@ for i in range(N):
         if arr[i][j] == 'B' :
             bi, bj = i, j
 
-
-# v_set = set()
 
 ans = 11
 dfs(1, ri, rj, bi, bj)
