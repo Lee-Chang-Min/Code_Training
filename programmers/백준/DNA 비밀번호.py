@@ -29,6 +29,8 @@ def DNA_count(start, end):
 DNA_count(start, end)
 
 for i in range(end, s):
+  print(i,s)
+  print("DNA_string[i]", DNA_string[i])
   if DNA_string[i] == 'A':
     DNA[0] += 1
   elif DNA_string[i] == 'C':
@@ -38,6 +40,7 @@ for i in range(end, s):
   elif DNA_string[i] == 'T':
     DNA[3] += 1
 
+  print("DNA_string[i-p]", DNA_string[i-p])
   if DNA_string[i-p] == 'A':
     DNA[0] -= 1
   elif DNA_string[i-p] == 'C':

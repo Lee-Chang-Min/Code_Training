@@ -1,0 +1,7 @@
+2 4
+DNA_string[i] T
+DNA_string[i-p] G
+3 4
+DNA_string[i] A
+DNA_string[i-p] A
+2
