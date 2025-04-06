@@ -31,3 +31,4 @@ def solution(capacity, routes):
 
 
 # solution(8, [[3, 12, 16], [8, 2, 12], [1, 14, 15]])
+print(solution(20, [[5, 1, 15], [14, 3, 18], [3, 15, 21], [9, 14, 52]])) 
