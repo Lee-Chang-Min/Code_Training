@@ -7,6 +7,8 @@ for _ in range(T):
         # 한 줄 입력을 받아 처리한 리스트를 바로 dp에 추가
         line_list = list(map(int, input().split()))
         dp.append(line_list)
+        # print(dp)
+        # [[50, 10, 100, 20, 40], [30, 50, 70, 10, 60]]
 
 
     if n > 1:
