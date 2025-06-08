@@ -16,6 +16,7 @@ def solution(x, y, n):
             return cnt
 
         for k in (num*2, num*3, num+n):
+            
             if k <= y and k not in visited:
                 q.append((k, cnt + 1))
 
