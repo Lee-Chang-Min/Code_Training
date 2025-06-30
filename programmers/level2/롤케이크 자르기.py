@@ -10,7 +10,7 @@ def solution(topping):
         left_set.add(topping[len(topping)-idx-1]) 
         left_num.append(len(left_set)) # len(set(topping[idx:]))
 
-    len_left = len(left_num)
+    left_num.reverse()
     #answer = [ i for i in range(len(topping)) if right_num[i] == left_num[i] ]
     # answer = []
     # for i in range(len(topping)):
@@ -21,7 +21,7 @@ def solution(topping):
 
     answer = []
     for i in range(len(right_num) - 1):
-        if right_num[i] == left_num[len_left - i - 2]:
+        if right_num[i] == left_num[i + 1]:
             answer.append(i)
 
     return len(answer)
