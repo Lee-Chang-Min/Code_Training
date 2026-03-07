@@ -8,8 +8,12 @@ def solution(plans):
         plans[i][1] = h*60 + m
         plans[i][2] = int(plans[i][2])
 
-    plans.sort(key=lambda x: x[1])
 
+    plans.sort(key=lambda x: x[1])
+    # [["korean", 700, 30], ["english", 730, 20], ["math", 750, 40]]
+    # 700 730 750
+    # 30 20 40
+    # 700 730 750
     for i in range(len(plans)-1):
         stack.append([plans[i][0], plans[i][2]])
         gap = plans[i+1][1] - plans[i][1]
