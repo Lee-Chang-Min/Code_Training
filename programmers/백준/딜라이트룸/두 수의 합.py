@@ -7,7 +7,7 @@ sys.stdin = io.StringIO("""9
 5 12 7 10 9 1 2 3 11
 13
 """)
-
+import sys
 input = sys.stdin.readline
 
 N = int(input())
